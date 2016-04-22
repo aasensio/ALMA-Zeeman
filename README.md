@@ -20,6 +20,19 @@ in your system. If not, it should be pretty straightforward to install it.
    This generates the pydelopar library that computes the routines for radiative
    transfer.
 
+## Running the code
+
+The code is run from the command line for a configuration file ``configuration.ini`` with
+
+    python lte.py configuration.ini
+
+Additionally, I recommend the users to run it from an interactive ``IPython`` session
+because they will have access to all calculations in the class ``lte``:
+
+    In [1]: run lte.py configuration.ini
+    In [2]: lte.stokesTotal[k][i][:,:] -> array of size 5xNLambda containing the frequency ([0,:]) and Stokes parameters ([1:5,:], I, Q, U, V)
+                                        for impact parameter k and region i
+
 ## Dependencies
 This code depends on the following set of Python packages, that can be easily installed
 using ``conda``, ``pip`` or any packaging system:
@@ -27,6 +40,8 @@ using ``conda``, ``pip`` or any packaging system:
     - numpy
     - matplotlib
     - configparser
+
+The code has been tested in Python 3.4+, but I don't discard it can work in Python 2.7+.
 
 ## Configuration file
 All the configuration is controlled from a configuration file that is human-readable.
