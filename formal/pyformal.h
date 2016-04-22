@@ -1,0 +1,2 @@
+extern void c_delopar_source(int* n, double* height, double* opacity, double* source, double* boundary, double* stokesOut);
+extern void c_delopar(int* n, double* height, double* opacity, double* emissivity, double* boundary, double* stokesOut);

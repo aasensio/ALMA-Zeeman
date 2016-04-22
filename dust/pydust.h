@@ -1,0 +1,1 @@
+extern void kappa_dust(double *freq, int *iddust, double *adust, double *kdust);
